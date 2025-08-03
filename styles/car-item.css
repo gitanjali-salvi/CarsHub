@@ -1,0 +1,132 @@
+.car__item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 300px; /* Set maximum width for each item */
+  margin: 0 auto; /* Center align the items horizontally */
+  margin-bottom: 20px; /* Add some margin between items */
+}
+
+.car__img-container {
+  flex: 1;
+}
+
+.car__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.car__item-content {
+  padding: 20px;
+}
+
+.section__title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.rent__price {
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.car__item-info {
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.car__item-info span {
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+.car__item-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Ensure button takes full width */
+}
+
+.car__item-btn:hover {
+  background-color: #0056b3;
+}
+
+.car__item-btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.car__item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 300px; /* Set maximum width for each item */
+  margin: 0 auto; /* Center align the items horizontally */
+  margin-bottom: 10px; /* Add some margin between items */
+  border: 1px solid #ddd; /* Add border to each item */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  position: relative; /* Add position relative for pseudo-elements */
+
+}
+
+@media (min-width: 576px) {
+  .car__item {
+    margin-right: 10px; /* Adjust the margin between columns */
+  }
+}
+
+
+.car__item::before {
+  content: ""; /* Add pseudo-element for overlay effect */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+  transition: background-color 0.3s ease; /* Transition for background color */
+}
+
+.car__item:hover::before {
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay on hover */
+}
+
+.car__item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+  transform: translateY(-5px); /* Move item slightly upwards on hover */
+}
+
+.car__item-content {
+  position: relative; /* Add position relative to ensure content is above overlay */
+  z-index: 1; /* Ensure content is above overlay */
+}
+
+.section__title,
+.rent__price {
+  color: #05368b; /* Change text color to white */
+}
+
+.car__item-info span {
+  color: #02223d; /* Change text color of info icons */
+}
+
+.car__item-btn a {
+  color: #fafcfe; /* Change button text color */
+}
+
+.car__item-btn a:hover {
+  color: #c8dbf5; /* Change button text color on hover */
+}
+
+/* Other existing styles */
+
